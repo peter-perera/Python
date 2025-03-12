@@ -7,9 +7,9 @@ balance_list = []
 while True:
     try: 
         spent = int(input('Enter the amount spent: '))
-        balance = balance - spent
-        balance_list.append(balance)
         while balance >= small:
+            balance = balance - spent
+            balance_list.append(balance)
             if spent >= start:
                 balance = balance - spent
                 balance_list.append(balance)
