@@ -9,9 +9,7 @@ while True:
 
         cheese = input("How many cheese pizzas do we want? ")
         cheese = int(cheese)
-        if cheese == small:
-            break
-        elif cheese < small:
+        if cheese < small:
             print('Please enter a valid amount.')
         else:
             pizza_list.append(cheese)
@@ -24,9 +22,7 @@ while True:
 
         chicken = input("How many chicken pizzas do we want? ")
         chicken = int(chicken)
-        if chicken == small:
-            break
-        elif chicken < small:
+        if chicken < small:
             print('Please enter a valid amount.')
         else:
             pizza_list.append(chicken)
@@ -39,9 +35,7 @@ while True:
 
         pepperoni = input("How many pepperoni pizzas do we want? ")
         pepperoni = int(pepperoni)
-        if pepperoni == small:
-            break
-        elif pepperoni < small:
+        if pepperoni < small:
             print('Please enter a valid amount.')
         else:
             pizza_list.append(pepperoni)
@@ -54,12 +48,21 @@ while True:
 
         veggie = input("How many veggie pizzas do we want? ")
         veggie = int(veggie)
-        if veggie == small:
-            break
-        elif veggie < small:
+        if veggie < small:
             print('Please enter a valid amount.')
         else:
             pizza_list.append(veggie)
             break
     except ValueError:
         print('Please enter a valid amount. ')
+# printing the amount of each pizza.
+#Excluding 0 pizzas
+for i in range(0, 1):
+    if pizza_list[0] != small:
+        print(f"Cheese: {pizza_list[0]}")
+    if pizza_list[1] != small:
+        print(f"Chicken: {pizza_list[1]}")
+    if pizza_list[2] != small:
+        print(f"Pepperoni: {pizza_list[2]}")
+    if pizza_list[3] != small:
+        print(f"Veggie: {pizza_list[3]}")
