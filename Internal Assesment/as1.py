@@ -11,7 +11,7 @@ meter_sec = input('Input descent speed in m/s: ')
 while meter_sec != stop:
     try:
         meter_sec = meter_sec.lower()
-        if meter_sec.strip('.').isnumeric():
+        if meter_sec.replace(".", "").isnumeric():
             speed.append(float(meter_sec))
         else:
             print('Error, invalid input.')
