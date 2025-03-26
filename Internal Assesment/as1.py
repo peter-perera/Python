@@ -19,10 +19,13 @@ while meter_sec != stop:
         meter_sec = meter_sec.lower()
     except ValueError:
         print('Error, invalid input.')
+
+# Go through all the speeds.
 for item in speed:
     if item > HIGH:
         highspeeds = highspeeds + 1
 print(f"There were {highspeeds} space probes faster than the safe speed.")
+#print speed if it is greater than 10
 if highspeeds > SMALL:
     print('The unsafe speeds are')
     for item in speed:
